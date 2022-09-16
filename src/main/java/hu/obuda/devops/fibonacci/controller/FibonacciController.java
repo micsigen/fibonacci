@@ -17,7 +17,7 @@ public class FibonacciController {
     FibonacciService fibonacciService;
 
     @GetMapping(value = "fibonacci")
-    public String getFibonacci(@RequestParam Integer n) {
+    public Integer getFibonacci(@RequestParam Integer n) {
         return fibonacciService.fibonacci(n);
     }
 

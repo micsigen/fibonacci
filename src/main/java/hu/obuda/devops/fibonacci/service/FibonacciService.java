@@ -9,17 +9,11 @@ public class FibonacciService {
      * @param n
      * @return Math exp: fib(n) = fib(n - 1) + fib(n - 2)
      */
-    public String fibonacci(Integer n) {
-        Integer a = 0, b = 0, c = 1;
-        StringBuffer stringBuffer = new StringBuffer();
-
-        for (Integer i = 1; i <= n; i++) {
-            a = b;
-            b = c;
-            c = a + b;
-            stringBuffer.append(a);
-            stringBuffer.append(" ");
-        }
-        return stringBuffer.toString();
+    public Integer fibonacci(Integer n) {
+        if (n == 1)
+            return 0;
+        if (n == 2)
+            return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
